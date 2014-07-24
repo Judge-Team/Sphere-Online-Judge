@@ -1,0 +1,14 @@
+#!/bin/sh
+
+CASE=$1
+ID=`echo ${CASE} | cut -d - -f 2`
+SRC=@PROJECT_SOURCE_DIR@
+BIN=@PROJECT_BINARY_DIR@
+
+EXEC=${BIN}/bin/${CASE}
+IN=${SRC}/data/${ID}.in
+OUT=${SRC}/data/${CASE}.out
+ANS=${SRC}/data/${ID}.ans
+
+${EXEC} < ${IN} > ${OUT}
+diff ${OUT} ${ANS}

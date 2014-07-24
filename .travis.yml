@@ -1,0 +1,17 @@
+language: c
+
+compiler:
+    - gcc
+
+install:
+    - sudo pip install cpp-coveralls --use-mirrors
+    - sudo apt-get update -qq
+    - sudo apt-get install -qq cmake
+
+script:
+    - cmake . -DCMAKE_C_FLAGS=--coverage
+    - make
+    - make test
+
+after_success:
+    - coveralls --exclude-pattern '.*CMake[^/]+\.c(?:pp)?'
