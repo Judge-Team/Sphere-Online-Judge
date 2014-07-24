@@ -3,7 +3,8 @@ project(UVa-Online-Judge)
 
 if(${CMAKE_C_COMPILER_ID} STREQUAL "GNU" OR
     ${CMAKE_C_COMPILER_ID} STREQUAL "Clang")
-        set(CMAKE_C_FLAGS "-lm -lcrypt -O2 -pipe -std=c99 ${CMAKE_C_FLAGS}")
+        set(CMAKE_C_FLAGS "-g -Og -pipe -std=c99 ${CMAKE_C_FLAGS}")
+        set(CMAKE_CXX_FLAGS "-g -Og ${CMAKE_CXX_FLAGS}")
 endif()
 
 configure_file(
