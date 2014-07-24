@@ -1,11 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(UVa-Online-Judge)
 
-if(${CMAKE_C_COMPILER_ID} STREQUAL "GNU" OR
-    ${CMAKE_C_COMPILER_ID} STREQUAL "Clang")
-        set(CMAKE_C_FLAGS "-g -O0 -pipe -std=c99 ${CMAKE_C_FLAGS}")
-        set(CMAKE_CXX_FLAGS "-g -O0 ${CMAKE_CXX_FLAGS}")
-endif()
+set(CMAKE_C_FLAGS "-std=c99 ${CMAKE_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "-std=c++98 ${CMAKE_CXX_FLAGS}")
 
 configure_file(
     ${PROJECT_SOURCE_DIR}/test.in
