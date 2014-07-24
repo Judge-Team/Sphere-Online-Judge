@@ -15,7 +15,7 @@ int get_total(long long * total)
 	char current_digit = 0;
 
 	for (;;) { // Use formula to get T(n)
-		scanf("%c", ¤t_digit);
+		scanf("%c", &current_digit);
 
 		if ('\n' == current_digit) {
 			break;
