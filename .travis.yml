@@ -3,6 +3,9 @@ language: c
 compiler:
     - gcc
 
+git:
+  depth: 1
+
 install:
     - sudo pip install cpp-coveralls --use-mirrors
     - sudo apt-get update -qq
